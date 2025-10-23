@@ -1,0 +1,42 @@
+/* Shared styles across all pages */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-rose-50;
+}
+
+/* Custom animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+    animation: pulse 3s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-rose-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-rose-500 to-amber-500 rounded-full;
+}
+
+/* Profile card hover effect */
+.profile-card {
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.2);
+}

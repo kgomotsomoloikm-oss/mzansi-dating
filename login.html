@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Mzansi Love Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="font-['Poppins'] bg-rose-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="min-h-screen flex items-center justify-center p-4">
+        <div class="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="bg-gradient-to-r from-rose-600 to-amber-500 p-6 text-center">
+                <h2 class="text-2xl font-bold text-white">Welcome Back</h2>
+                <p class="text-rose-100">Continue your journey to find love</p>
+            </div>
+            
+            <form class="p-6 space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500" required>
+                </div>
+                
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500" required>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="w-4 h-4 text-rose-600 rounded focus:ring-rose-500">
+                        <label for="remember" class="ml-2 text-sm text-gray-600">Remember me</label>
+                    </div>
+                    <a href="/forgot-password.html" class="text-sm text-rose-600 hover:underline">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-rose-600 to-amber-500 text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-[1.01]">
+                    Log In
+                </button>
+                
+                <div class="relative flex items-center py-4">
+                    <div class="flex-grow border-t border-gray-300"></div>
+                    <span class="flex-shrink mx-4 text-gray-500">or</span>
+                    <div class="flex-grow border-t border-gray-300"></div>
+                </div>
+                
+                <button type="button" class="w-full py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
+                    <i data-feather="facebook" class="text-blue-600"></i>
+                    Continue with Facebook
+                </button>
+                
+                <button type="button" class="w-full py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
+                    <i data-feather="google" class="text-red-500"></i>
+                    Continue with Google
+                </button>
+                
+                <div class="text-center text-sm text-gray-600">
+                    Don't have an account? <a href="/signup.html" class="text-rose-600 font-medium hover:underline">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <custom-footer></custom-footer>
+    
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
